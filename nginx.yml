@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: Container32.azurecr.io/nginx:v1
-        ports:
-        - containerPort: 80
+        image: container36.azurecr.io/nginx:v1
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+        - name: acr-secret-3
+
  
 ---
 apiVersion: v1
